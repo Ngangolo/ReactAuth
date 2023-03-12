@@ -3,18 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+
+   
+    
+       <!-- Favicon icon -->
+    <link rel="icon" href="%PUBLIC_URL%/adminfile/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/adminfile/css/style.css">
+    
+     
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -39,5 +48,54 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="%PUBLIC_URL%/adminfile/js/vendor-all.min.js"></script>
+    <script src="%PUBLIC_URL%/adminfile/js/plugins/bootstrap.min.js"></script>
+    <script src="%PUBLIC_URL%/adminfile/js/pcoded.min.js"></script>
+
+    <!-- Apex Chart -->
+    <script src="%PUBLIC_URL%/adminfile/js/plugins/apexcharts.min.js"></script>
+
+
+    <!-- custom-chart js -->
+    <script src="%PUBLIC_URL%/adminfile/js/pages/dashboard-main.js"></script>
+
+    <script>
+      (function() {
+          if ($('#layout-sidenav').hasClass('sidenav-horizontal') || window.layoutHelpers.isSmallScreen()) {
+              return;
+          }
+          try {
+              window.layoutHelpers._getSetting("Rtl")
+              window.layoutHelpers.setCollapsed(
+                  localStorage.getItem('layoutCollapsed') === 'true',
+                  false
+              );
+          } catch (e) {}
+      })();
+      $(function() {
+          $('#layout-sidenav').each(function() {
+              new SideNav(this, {
+                  orientation: $(this).hasClass('sidenav-horizontal') ? 'horizontal' : 'vertical'
+              });
+          });
+          $('body').on('click', '.layout-sidenav-toggle', function(e) {
+              e.preventDefault();
+              window.layoutHelpers.toggleCollapsed();
+              if (!window.layoutHelpers.isSmallScreen()) {
+                  try {
+                      localStorage.setItem('layoutCollapsed', String(window.layoutHelpers.isCollapsed()));
+                  } catch (e) {}
+              }
+          });
+      });
+      $(document).ready(function() {
+          $("#pcoded").pcodedmenu({
+              themelayout: 'horizontal',
+              MenuTrigger: 'hover',
+              SubMenuTrigger: 'hover',
+          });
+      });
+  </script>
   </body>
 </html>
