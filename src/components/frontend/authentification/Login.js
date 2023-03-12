@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 
 function Login() {
 
@@ -59,34 +59,69 @@ function Login() {
 
     return (
         <div>
-            <div className="container py-5">
-                <div className="row justify-content-center">
-                    <div className="col-md-6">
-                        <div className="card">
-                            <div className="card-header">
-                                <h4>Login</h4>
-                            </div>
-                            <div className="card-body">
-                                <form onSubmit={loginSubmit}>
-                                    <div className="form-group mb-3">
-                                        <label>Email</label>
-                                        <input type="email" name="email" onChange={handleInput} value={loginInput.email} className="form-control" />
-                                        <span>{loginInput.error_list.email}</span>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <label>Password</label>
-                                        <input type="password" name="password" onChange={handleInput} value={loginInput.password} className="form-control" />
-                                        <span>{loginInput.error_list.password}</span>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <button type="submit" className="btn btn-primary">Login</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+            <div class="hold-transition login-page">
+    <div class="login-box">
+
+<div class="card card-outline card-primary">
+    <div class="card-header text-center">
+        {/* <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a> */}
+        <img className="img-radius" src={process.env.PUBLIC_URL + '/images/img2.png'} />
+    </div>
+    <div class="card-body">
+    <h4 class="login-box-msg"> <b>Connexion </b> </h4>
+        <form onSubmit={loginSubmit}>
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Email" name="email" onChange={handleInput} value={loginInput.email}/>
+                <span>{loginInput.error_list.email}</span>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
                     </div>
                 </div>
             </div>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" name="password" onChange={handleInput} value={loginInput.password} placeholder="Password"/>
+                <span>{loginInput.error_list.password}</span>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="icheck-primary">
+                        <input type="checkbox" id="remember"/>
+                        <label for="remember">
+                            Remember Me
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <button type="submit" class="btn btn-primary btn-block">
+                       
+                    Login
+       
+                   </button>
+                </div>
+
+            </div>
+        </form>
+
+        <p class="mb-1">
+            <a href="forgot-password.html"> mot de passe oublié?</a>
+        </p>
+        <Link to="/register" className=" text-center">
+            Je n'ai pas de compte m'inscrire ?
+        </Link>
+    </div>
+
+</div>
+
+</div>
+
+    </div>
         </div>
     );
 }
