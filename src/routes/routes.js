@@ -1,4 +1,4 @@
-import Dashboard from '../layouts/admin/Dashboard';
+import DashboardAdmin from '../layouts/admin/DashboardAdmin';
 // import UserDashboard from '../layouts/frontend/Dashboard';
 // import Profile from '../components/admin/Profiles';
 // import Login from '../components/frontend/frontend/Auth/Login';
@@ -6,7 +6,7 @@ import Dashboard from '../layouts/admin/Dashboard';
 
 const routes = [
     { path: '/admin', exact: true, name: 'Admin' },
-    { path: '/admin/dashboard', exact: true, name: 'Dashboard', component: Dashboard },
+    { path: '/admin/dashboardAdmin', exact: true, name: 'DashboardAdmin', component: DashboardAdmin },
     // { path: 'dashboard', exact: true, name: 'UserDashboard', component: UserDashboard },
 
     // { path: '/admin/profile', exact: true, name: 'Profile', component: Profile },

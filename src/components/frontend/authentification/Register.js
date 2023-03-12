@@ -34,7 +34,7 @@ function Register() {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
                     swal("Success", res.data.message, "success");
-                    navigate('/dashboard');
+                    navigate('/');
                 }
                 else {
                     setRegister({ ...registerInput, error_list: res.data.validation_errors });

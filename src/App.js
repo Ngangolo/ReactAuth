@@ -1,15 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-
-
-import MasterLayout from './layouts/admin/MasterLayout';
 import Register from './components/frontend/authentification/Register';
 import Login from './components/frontend/authentification/Login';
 import AdminPrivateRoute from './AdminPrivateRoute';
-import PublicRoute from './PublicRoute';
 import routes from './routes/routes';
 import publicRoutes from './routes/Publicroutes';
-import Home from './components/frontend/Home';
+import Home from './layouts/frontend/Home';
 
 
 import axios from 'axios';
@@ -43,7 +39,6 @@ function App() {
             ))}
           </Route>
 
-          {/* <PublicRoute path="/" name="Home" /> */}
           <Route  >
             {publicRoutes.map(({ path, component: Component }) => (
               <Route key={path} path={path} element={<Component />} />
@@ -56,7 +51,6 @@ function App() {
           <Route path="/register" element={localStorage.getItem('auth_token') ? <Navigate to="/" /> : <Register />} >
           </Route>
 
-          {/* <Route path="/admin" name="Admin" render={(props) => <MasterLayout {...props} />} /> */}
         </Routes>
       </Router>
     </div>

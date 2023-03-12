@@ -40,10 +40,10 @@ function Login() {
                     localStorage.setItem('auth_name', res.data.username);
                     swal("Success", res.data.message, "success");
                     if (res.data.role === 'admin') {
-                        navigate('/admin/dashboard');
+                        navigate('/admin/dashboardAdmin');
                     }
                     else {
-                        navigate('/dashboard');
+                        navigate('/dashboardEntrepreneur');
                     }
                 }
                 else if (res.data.status === 401) {

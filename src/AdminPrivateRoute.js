@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate,} from 'react-router-dom';
+import { useNavigate,} from 'react-router-dom';
 import axios from 'axios';
-import MasterLayout from './layouts/admin/MasterLayout';
 import swal from 'sweetalert';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
