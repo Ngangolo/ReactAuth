@@ -1,8 +1,8 @@
 import Home from '../layouts/frontend/Home';
-import Page403 from '../components/PageErrors/Page403';
-import Page404 from '../components/PageErrors/Page404';
-import Register from '../components/frontend/authentification/Register';
-import Login from '../components/frontend/authentification/Login';
+import Page403 from '../layouts/PageErrors/Page403';
+import Page404 from '../layouts/PageErrors/Page404';
+import Register from '../layouts/authentification/Register';
+import Login from '../layouts/authentification/Login';
 import DashboardEntrepreneur from '../layouts/entrepreneur/DashboardEntrepreneur';
 import LandingPage from '../layouts/frontend/LandingPage';
 

@@ -14,7 +14,7 @@ function DashboardEntrepreneur() {
                             <div className="col-sm-6">
                                 <ol className="breadcrumb float-sm-right">
                                     <li className="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li className="breadcrumb-item active">Dashboard v1</li>
+                                    <li className="breadcrumb-item active">Dashboard </li>
                                 </ol>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ function DashboardEntrepreneur() {
 
                             <section className="col-lg-7 connectedSortable">
 
-                                <div className="card">
+                                {/* <div className="card">
                                     <div className="card-header">
                                         <h3 className="card-title">
                                             <i className="fas fa-chart-pie mr-1"></i>
@@ -119,7 +119,7 @@ function DashboardEntrepreneur() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className="card direct-chat direct-chat-primary">
                                     <div className="card-header">

@@ -32,9 +32,9 @@ function Register() {
             axios.post(`/api/register`, data).then(res => {
                 if (res.data.status === 200) {
                     localStorage.setItem('auth_token', res.data.token);
-                    localStorage.setItem('auth_name', res.data.username);
-                    swal("Success", res.data.message, "success");
-                    navigate('/');
+                    // localStorage.setItem('auth_name', res.data.username);
+                    localStorage.setItem('auth_user',JSON.stringify(res.data.user) );                    swal("Success", res.data.message, "success");
+                    navigate('/dashboardEntrepreneur');
                 }
                 else {
                     setRegister({ ...registerInput, error_list: res.data.validation_errors });
@@ -50,7 +50,7 @@ function Register() {
                     <div class="card card-outline card-primary">
                         <div class="card-header text-center">
                             {/* <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a> */}
-                            <img className="img-radius" src={process.env.PUBLIC_URL + '/images/img2.png'} />
+                            <img className="img-radius" width="250" height="80" src={process.env.PUBLIC_URL + '/images/img2.png'} />
                         </div>
                         <div class="card-body">
                             <h4 class="login-box-msg"> <b>Inscription </b> </h4>

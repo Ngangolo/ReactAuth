@@ -4,17 +4,17 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
-function AdminPrivateRoute({ ...rest }) {
+function ExpertPrivateRoute({ ...rest }) {
     const location = useLocation();
 
     const navigate = useNavigate();
 
     const [Authenticated, setAuthenticated] = useState(false);
     const [loading, setloading] = useState(true);
- 
+
     useEffect(() => {
 
-        axios.get(`/api/checkingAuthenticated`).then(res => {
+        axios.get(`/api/checkingAuthenticatedExpert`).then(res => {
             if (res.status === 200) {
                 setAuthenticated(true);
             }
@@ -64,4 +64,4 @@ function AdminPrivateRoute({ ...rest }) {
     );
 }
 
-export default AdminPrivateRoute;
+export default ExpertPrivateRoute;

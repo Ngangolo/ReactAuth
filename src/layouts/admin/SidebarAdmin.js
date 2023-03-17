@@ -1,31 +1,12 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import swal from 'sweetalert';
-import axios from 'axios';
+import React from 'react'
+import { Link } from "react-router-dom";
 import { Home } from '@material-ui/icons';
 import { Logout } from '@mui/icons-material';
-import { Folder } from '@mui/icons-material';
-import { Article } from '@mui/icons-material';
-import { ContentPaste } from '@mui/icons-material';
 import { Apartment } from '@mui/icons-material';
+import GroupIcon from '@mui/icons-material/Group';
+import EmailIcon from '@mui/icons-material/Email';
 
-
-function Sidebar() {
-    const navigate = useNavigate();
-
-    const logoutSubmit = (e) => {
-        e.preventDefault();
-
-        axios.post(`/api/logout`).then(res => {
-            if (res.data.status === 200) {
-                localStorage.removeItem('auth_token');
-                localStorage.removeItem('auth_name');
-                swal("Success", res.data.message, "success");
-                navigate('/');
-            }
-        });
-    }
-
+function SidebarAdmin() {
     return (
         <>
             <aside className="main-sidebar sidebar-dark-primary elevation-4">
@@ -37,14 +18,14 @@ function Sidebar() {
                 </a>
                 <div className="sidebar">
 
-                    <div className="user-panel mt-3 pb-3 mb-3 d-flex">
+                    {/* <div className="user-panel mt-3 pb-3 mb-3 d-flex">
                         <div className="image"> 
                             <img src={process.env.PUBLIC_URL + '/dist/img/user2-160x160.jpg'} className="img-circle elevation-2" alt="User Image" />
                         </div>
                         <div className="info">
-                            <a href="#" className="d-block"> {localStorage.getItem('auth_user.name')}</a>
+                            <a href="#" className="d-block">{localStorage.getItem('auth_name')}</a>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* <div className="form-inline">
                         <div className="input-group" data-widget="sidebar-search">
@@ -61,7 +42,7 @@ function Sidebar() {
                         <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                             <li className="nav-item menu-open">
-                                <Link to="/dashboardEntrepreneur" className="nav-link active">
+                                <Link to="/admin/dashboardAdmin" className="nav-link active ">
                                     <Home />
                                     <p>
                                         Dashboard
@@ -70,11 +51,11 @@ function Sidebar() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/multiStep" className="nav-link">
+                                <Link to="/listeUtilisateurs" className="nav-link ">
 
-                                    <ContentPaste />
+                                    <GroupIcon />
                                     <p>
-                                        Creer un contrat CDD
+                                       Utilisateurs
                                     </p>
 
                                 </Link>
@@ -84,44 +65,37 @@ function Sidebar() {
                                
                                     <Apartment />
                                     <p>
-                                        Creer une entreprise
+                                        Services
                                     </p>
                                 
                                 </Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/documentListe" className="nav-link ">
-                                    <Folder />
+                            <Link to="/showDocument" className="nav-link ">
+                                    <EmailIcon />
                                     <p>
-                                        Mes Documents
+                                    Messages
                                     </p>
                             </Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a href="pages/widgets.html" className="nav-link">
                                     <i className="nav-icon fas fa-th"></i>
                                     <p>
                                         Mes Commandes
                                     </p>
                                 </a>
-                            </li>
+                            </li> */}
+                     
                             <li className="nav-item">
                                 <a href="pages/widgets.html" className="nav-link">
-                                    <Article />
-                                    <p>
-                                        Mes Rapports
-
-                                    </p>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" onClick={logoutSubmit}>
                                     <Logout />
                                     <p>
                                         Deconnexion
                                     </p>
-                                    </Link>
+                                </a>
                             </li>
+
 
 
                         </ul>
@@ -135,4 +109,4 @@ function Sidebar() {
     )
 }
 
-export default Sidebar
+export default SidebarAdmin

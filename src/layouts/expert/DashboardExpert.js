@@ -1,17 +1,16 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import MasterLayout from './MasterLayout'
-
-function DashboardAdmin() {
+import ExpertLayout from './ExpertLayout'
+function DashboardExpert() {
     return (
-        <MasterLayout>
+        <ExpertLayout>
             <div className="content-wrapper">
 
                 <div className="content-header">
                     <div className="container-fluid">
                         <div className="row mb-2">
                             <div className="col-sm-6">
-                                <h1 className="m-0">Dashboard Administrateur</h1>
+                                <h1 className="m-0">Dashboard Expert</h1>
                             </div>
                             <div className="col-sm-6">
                                 <ol className="breadcrumb float-sm-right">
@@ -578,9 +577,9 @@ function DashboardAdmin() {
                 </section>
 
             </div>
-        </MasterLayout>
+        </ExpertLayout>
 
     )
 }
 
-export default DashboardAdmin
+export default DashboardExpert

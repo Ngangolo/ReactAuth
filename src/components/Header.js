@@ -13,8 +13,8 @@ function Header() {
         axios.post(`/api/logout`).then(res => {
             if (res.data.status === 200) {
                 localStorage.removeItem('auth_token');
-                localStorage.removeItem('auth_name');
-                swal("Success", res.data.message, "success");
+                localStorage.removeItem('auth_user');
+                // swal("Success", res.data.message, "success");
                 navigate('/');
             }
         });
@@ -165,7 +165,9 @@ function Header() {
                     </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true">
-                            <img alt="" class="img-circle" width="30" height="30" src={process.env.PUBLIC_URL + '/dist/img/user2-160x160.jpg'} />
+                            <img alt="" class="img-circle mr-1" width="30" height="30" src={process.env.PUBLIC_URL + '/dist/img/user2-160x160.jpg'} />
+                            <strong style={{color:"black"}}>  { JSON.parse(localStorage.getItem('auth_user.name'))}</strong>
+                           
                         </a>
                         <ul className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                             <div className="dropdown-divider"></div>

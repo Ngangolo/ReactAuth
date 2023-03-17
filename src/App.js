@@ -1,11 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Register from './components/frontend/authentification/Register';
-import Login from './components/frontend/authentification/Login';
+import Register from './layouts/authentification/Register';
+import Login from './layouts/authentification/Login';
 import AdminPrivateRoute from './AdminPrivateRoute';
+import EntrepreneurPrivateRoute from './EntrepreneurPrivateRoute';
+import ExpertPrivateRoute from './ExpertPrivateRoute';
 import routes from './routes/routes';
+import entrepreneurRoute from './routes/EntrepreneurRoute';
+import expertRoute from './routes/ExpertRoute';
 import publicRoutes from './routes/Publicroutes';
-import Home from './layouts/frontend/Home';
+// import Home from './layouts/frontend/Home';
 
 
 import axios from 'axios';
@@ -35,6 +39,16 @@ function App() {
          
           <Route element={<AdminPrivateRoute />} >
             {routes.map(({ path, component: Component }) => (
+              <Route key={path} path={path} element={<Component />} />
+            ))}
+          </Route>
+          <Route element={<ExpertPrivateRoute />} >
+            {expertRoute.map(({ path, component: Component }) => (
+              <Route key={path} path={path} element={<Component />} />
+            ))}
+          </Route>
+          <Route element={<EntrepreneurPrivateRoute />} >
+            {entrepreneurRoute.map(({ path, component: Component }) => (
               <Route key={path} path={path} element={<Component />} />
             ))}
           </Route>

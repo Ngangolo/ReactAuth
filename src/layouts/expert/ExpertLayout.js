@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import SidebarAdmin from './SidebarAdmin'
-const MasterLayout = ({ children }) => {
+import SidebarExpert from './SidebarExpert';
+const ExpertLayout = ({ children }) => {
 
     return (
         <>
             <Header />
-            <SidebarAdmin />
+            <SidebarExpert />
             <div className="m-2">
                 {children}
             </div>
@@ -17,5 +17,5 @@ const MasterLayout = ({ children }) => {
 
 }
 
-export default MasterLayout;
+export default ExpertLayout;
 
