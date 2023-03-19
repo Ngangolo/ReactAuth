@@ -166,7 +166,7 @@ function Header() {
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true">
                             <img alt="" class="img-circle mr-1" width="30" height="30" src={process.env.PUBLIC_URL + '/dist/img/user2-160x160.jpg'} />
-                            <strong style={{color:"black"}}>  { JSON.parse(localStorage.getItem('auth_user.name'))}</strong>
+                            <strong style={{color:"black"}}>  { JSON.parse(localStorage.getItem('auth_user')).name}</strong>
                            
                         </a>
                         <ul className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
