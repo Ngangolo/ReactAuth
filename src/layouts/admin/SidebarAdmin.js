@@ -61,7 +61,7 @@ function SidebarAdmin() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/formu" className="nav-link ">
+                            <Link to="/listeServices" className="nav-link ">
                                
                                     <Apartment />
                                     <p>
@@ -71,6 +71,14 @@ function SidebarAdmin() {
                                 </Link>
                             </li>
                             <li className="nav-item">
+                                <a href="pages/widgets.html" className="nav-link">
+                                    <i className="nav-icon fas fa-th"></i>
+                                    <p>
+                                        Packs services
+                                    </p>
+                                </a>
+                            </li>
+                            <li className="nav-item">
                             <Link to="/showDocument" className="nav-link ">
                                     <EmailIcon />
                                     <p>
@@ -78,14 +86,7 @@ function SidebarAdmin() {
                                     </p>
                             </Link>
                             </li>
-                            {/* <li className="nav-item">
-                                <a href="pages/widgets.html" className="nav-link">
-                                    <i className="nav-icon fas fa-th"></i>
-                                    <p>
-                                        Mes Commandes
-                                    </p>
-                                </a>
-                            </li> */}
+                          
                      
                             <li className="nav-item">
                                 <a href="pages/widgets.html" className="nav-link">

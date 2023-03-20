@@ -33,25 +33,25 @@ function DashboardAdmin() {
                                 <div className="small-box bg-info">
                                     <div className="inner">
                                         <h3>150</h3>
-                                        <p>Commandes</p>
+                                        <p>Utilisateurs</p>
                                     </div>
                                     <div className="icon">
-                                        <i className="fas fa-shopping-cart"></i>
+                                        <i className="fas fa-users"></i>
                                     </div>
-                                    <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right"></i></a>
+                                    <a href="#" className="small-box-footer">Plus d'info <i className="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-6">
 
                                 <div className="small-box bg-success">
                                     <div className="inner">
-                                        <h3>53 </h3>
-                                        <p>Documents</p>
+                                        <h3>10 </h3>
+                                        <p>Services</p>
                                     </div>
                                     <div className="icon">
-                                        <i className="far fa-folder"></i>
+                                        <i className="far fa-folder"></i> 
                                     </div>
-                                    <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right"></i></a>
+                                    <a href="#" className="small-box-footer">Plus d'info <i className="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-6">
@@ -59,26 +59,26 @@ function DashboardAdmin() {
                                 <div className="small-box bg-warning">
                                     <div className="inner">
                                         <h3>44</h3>
-                                        <p>Contrat</p>
+                                        <p>Messages</p>
                                     </div>
                                     <div className="icon">
 
                                         <i className="far fa-copy"></i>
                                     </div>
-                                    <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right"></i></a>
+                                    <a href="#" className="small-box-footer">Plus d'info <i className="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-6">
 
                                 <div className="small-box bg-danger">
                                     <div className="inner">
-                                        <h3>65</h3>
-                                        <p>Entreprise</p>
+                                        <h3>5</h3>
+                                        <p>Paks Services</p>
                                     </div>
                                     <div className="icon">
                                         <i className="fas fa-chart-pie"></i>
                                     </div>
-                                    <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right"></i></a>
+                                    <a href="#" className="small-box-footer">Plus d'info <i className="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
 

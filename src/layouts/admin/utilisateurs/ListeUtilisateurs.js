@@ -2,10 +2,10 @@ import React from 'react'
 import MasterLayout from '../MasterLayout'
 
 function ListeUtilisateurs() {
-  return (
-    <MasterLayout>
-          <div class="content-wrapper">
-          <section class="content-header">
+    return (
+        <MasterLayout>
+            <div class="content-wrapper">
+                <section class="content-header">
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
@@ -20,79 +20,142 @@ function ListeUtilisateurs() {
                         </div>
                     </div>
                 </section>
-                        <div className="col-12">
-                            <div className="card">
-                                <div className="card-header">
-                                    {/* <h3 className="card-title"></h3> */}
-                                    <div className="card-tools">
-                                        <div className="input-group input-group-sm" >
-                                            <input type="text" name="table_search" className="form-control float-right"
-                                                placeholder="Search"/>
-                                            <div className="input-group-append">
-                                                <button type="submit" className="btn btn-default">
-                                                    <i className="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
+                <div className="col-12">
+                    <div className="card">
+                        <div className="card-header">
+                            {/* <h3 className="card-title"></h3> */}
+                            <div className="card-tools">
+                                <div className="input-group input-group-sm" >
+                                    <input type="text" name="table_search" className="form-control float-right"
+                                        placeholder="Search" />
+                                    <div className="input-group-append">
+                                        <button type="submit" className="btn btn-default">
+                                            <i className="fas fa-search"></i>
+                                        </button>
                                     </div>
                                 </div>
-
-                                <div className="card-body table-responsive p-0">
-                                    <table className="table table-hover text-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>User</th>
-                                                <th>Date</th>
-                                                <th>Status</th>
-                                                <th>Reason</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>183</td>
-                                                <td>John Doe</td>
-                                                <td>11-7-2014</td>
-                                                <td><span className="tag tag-success">Approved</span></td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback
-                                                    doner.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>219</td>
-                                                <td>Alexander Pierce</td>
-                                                <td>11-7-2014</td>
-                                                <td><span className="tag tag-warning">Pending</span></td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback
-                                                    doner.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>657</td>
-                                                <td>Bob Doe</td>
-                                                <td>11-7-2014</td>
-                                                <td><span className="tag tag-primary">Approved</span></td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback
-                                                    doner.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>175</td>
-                                                <td>Mike Doe</td>
-                                                <td>11-7-2014</td>
-                                                <td><span className="tag tag-danger">Denied</span></td>
-                                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback
-                                                    doner.</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
                             </div>
-
                         </div>
+
+
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table m-0">
+                                    <thead>
+                                        <tr>
+                                            <th className="col-2">Nom</th>
+                                            <th className="col-3">E-mail</th>
+                                            <th className="col-2">Status</th>
+                                            <th className="col-4">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Koné N'gangolo</td>
+                                            <td>konengangolo54@gmail.com</td>
+                                            <td><span class="badge badge-success">accepter</span></td>
+                                            <td >
+                                                <button
+                                                    // onClick={() => getPDF(document.file)}
+
+                                                    className="btn btn-success mx-1">
+                                                    Accepter
+                                                </button>
+                                                <button
+                                                    className="btn btn-primary mx-1"
+                                                >
+                                                    Telecharger
+                                                </button>
+                                                <button
+                                                    // onClick={() => handleDelete(document.id)}
+                                                    className="btn btn-danger mx-1">
+                                                    Supprimer
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OR1848</td>
+                                            <td>Samsung Smart TV</td>
+                                            <td><span class="badge badge-warning">en attente</span></td>
+                                            <td>
+                                                <button
+                                                    // onClick={() => getPDF(document.file)}
+
+                                                    className="btn btn-success mx-1">
+                                                    Accepter
+                                                </button>
+                                                <button
+                                                    className="btn btn-primary mx-1"
+                                                >
+                                                    Telecharger
+                                                </button>
+                                                <button
+                                                    // onClick={() => handleDelete(document.id)}
+                                                    className="btn btn-danger mx-1">
+                                                    Supprimer
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OR7429</td>
+                                            <td>iPhone 6 Plus</td>
+                                            <td><span class="badge badge-danger">refuser</span></td>
+                                            <td>
+                                                <button
+                                                    // onClick={() => getPDF(document.file)}
+
+                                                    className="btn btn-success mx-1">
+                                                    Accepter
+                                                </button>
+                                                <button
+                                                    className="btn btn-primary mx-1"
+                                                >
+                                                    Telecharger
+                                                </button>
+                                                <button
+                                                    // onClick={() => handleDelete(document.id)}
+                                                    className="btn btn-danger mx-1">
+                                                    Supprimer
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OR7429</td>
+                                            <td>Samsung Smart TV</td>
+                                            <td><span class="badge badge-info">Processing</span></td>
+                                            <td>
+                                                <button
+                                                    // onClick={() => getPDF(document.file)}
+
+                                                    className="btn btn-success mx-1">
+                                                    Accepter
+                                                </button>
+                                                <button
+                                                    className="btn btn-primary mx-1"
+                                                >
+                                                    Telecharger
+                                                </button>
+                                                <button
+                                                    // onClick={() => handleDelete(document.id)}
+                                                    className="btn btn-danger mx-1">
+                                                    Supprimer
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
 
+                </div>
+            </div>
 
-    </MasterLayout>
-  )
+
+        </MasterLayout>
+    )
 }
 
 export default ListeUtilisateurs

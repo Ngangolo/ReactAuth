@@ -13,12 +13,23 @@ function Login() {
         error_list: [],
     });
 
-    // useEffect(() => {
-    //     if (localStorage.getItem('token') !== "" && localStorage.getItem('token') !== null) {
-    //         navigate("/dashboard");
-    //     }
-    //     console.log(localStorage.getItem('token'))
-    // }, [])
+    useEffect(() => {
+       
+        if (localStorage.getItem('auth_user') !== "" ) {
+            // if (localStorage.getItem('auth_user') === 'admin') {
+            //     navigate('/admin/dashboardAdmin');
+            // }
+            // else if (localStorage.getItem('auth_user') === 'expert') {
+            //     navigate('/dashboardExpert');
+            // }
+            // else if (JSON.parse(localStorage.getItem('auth_user')).role_as === 'entrepreneur') {
+            //     navigate('/dashboardEntrepreneur');
+            // }
+            // else{
+                
+            // }
+        }
+    }, [])
 
     const handleInput = (e) => {
         e.persist();
