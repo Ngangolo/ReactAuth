@@ -43,10 +43,10 @@ function ListeUtilisateurs() {
                                 <table class="table m-0">
                                     <thead>
                                         <tr>
-                                            <th className="col-2">Nom</th>
-                                            <th className="col-3">E-mail</th>
+                                            <th className="col-3">Nom</th>
+                                            <th className="col-4">E-mail</th>
                                             <th className="col-2">Status</th>
-                                            <th className="col-4">Actions</th>
+                                            <th className="col-3">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -61,11 +61,7 @@ function ListeUtilisateurs() {
                                                     className="btn btn-success mx-1">
                                                     Accepter
                                                 </button>
-                                                <button
-                                                    className="btn btn-primary mx-1"
-                                                >
-                                                    Telecharger
-                                                </button>
+                                              
                                                 <button
                                                     // onClick={() => handleDelete(document.id)}
                                                     className="btn btn-danger mx-1">
@@ -76,7 +72,7 @@ function ListeUtilisateurs() {
                                         <tr>
                                             <td>OR1848</td>
                                             <td>Samsung Smart TV</td>
-                                            <td><span class="badge badge-warning">en attente</span></td>
+                                            <td><span class="badge badge-warning">attente</span></td>
                                             <td>
                                                 <button
                                                     // onClick={() => getPDF(document.file)}
@@ -84,11 +80,7 @@ function ListeUtilisateurs() {
                                                     className="btn btn-success mx-1">
                                                     Accepter
                                                 </button>
-                                                <button
-                                                    className="btn btn-primary mx-1"
-                                                >
-                                                    Telecharger
-                                                </button>
+                                               
                                                 <button
                                                     // onClick={() => handleDelete(document.id)}
                                                     className="btn btn-danger mx-1">
@@ -107,11 +99,7 @@ function ListeUtilisateurs() {
                                                     className="btn btn-success mx-1">
                                                     Accepter
                                                 </button>
-                                                <button
-                                                    className="btn btn-primary mx-1"
-                                                >
-                                                    Telecharger
-                                                </button>
+                                              
                                                 <button
                                                     // onClick={() => handleDelete(document.id)}
                                                     className="btn btn-danger mx-1">
@@ -122,7 +110,7 @@ function ListeUtilisateurs() {
                                         <tr>
                                             <td>OR7429</td>
                                             <td>Samsung Smart TV</td>
-                                            <td><span class="badge badge-info">Processing</span></td>
+                                            <td><span class="badge badge-info">bloquer</span></td>
                                             <td>
                                                 <button
                                                     // onClick={() => getPDF(document.file)}
@@ -130,11 +118,7 @@ function ListeUtilisateurs() {
                                                     className="btn btn-success mx-1">
                                                     Accepter
                                                 </button>
-                                                <button
-                                                    className="btn btn-primary mx-1"
-                                                >
-                                                    Telecharger
-                                                </button>
+                                            
                                                 <button
                                                     // onClick={() => handleDelete(document.id)}
                                                     className="btn btn-danger mx-1">
