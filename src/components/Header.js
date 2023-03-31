@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import axios from 'axios';
+import Head from './Head';
 
 function Header() {
 
@@ -22,6 +23,7 @@ function Header() {
 
     return (
         <>
+        <Head/>
             {/* <div className="preloader flex-column justify-content-center align-items-center">
                 <img className="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60" />
             </div> */}
